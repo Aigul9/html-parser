@@ -1,0 +1,13 @@
+2021-03-06_21:51:13.018 [main] ERROR parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-06_21:51:37.806 [main] ERROR parser.Parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-06_21:52:07.430 [main] ERROR parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-06_21:54:29.246 [main] ERROR parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-06_21:54:50.028 [main] ERROR parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-06_21:55:38.140 [main] ERROR parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-06_21:55:53.857 [main] ERROR parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-06_22:05:25.940 [main] ERROR parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-06_22:05:39.315 [main] INFO  parser - Success
+2021-03-06_22:06:44.421 [main] INFO  parser - Success
+2021-03-06_22:08:18.715 [main] INFO  parser - Success
+2021-03-06_22:10:17.694 [main] INFO  parser - Success
+2021-03-06_22:10:32.524 [main] INFO  parser - Success
