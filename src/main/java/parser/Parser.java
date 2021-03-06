@@ -5,16 +5,13 @@ import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-//import ch.qos.logback.classic.LoggerContext;
-//import ch.qos.logback.core.util.StatusPrinter;
-
 import org.jsoup.*;
 import org.jsoup.nodes.Document;
 
 public class Parser {
 
     static final Logger logger = LoggerFactory.getLogger("parser");
-    static final String url = "https://www.simbirsoft.como/";
+    static final String url = "https://www.simbirsoft.com/";
 
     public static void main(String[] args) {
         Document page;
@@ -36,6 +33,10 @@ public class Parser {
             TreeMap<String, Integer> wordsCount = new TreeMap<>();
 
             for (String nextString : parsedText) {
+                if (!isLetter(nextString)) {
+                    continue;
+                }
+
                 Integer count = wordsCount.get(nextString.toLowerCase());
 
                 if (count == null) {
@@ -49,15 +50,19 @@ public class Parser {
             }
 
             // printing method
-            for (Map.Entry<String, Integer> i: wordsCount.entrySet()) {
-                System.out.println(i);
+            for (Map.Entry<String, Integer> word: wordsCount.entrySet()) {
+                System.out.println(String.format("%s - %s", word.getKey(), word.getValue()));
             }
 
-            System.out.println(textFromDoc);
+//            System.out.println(textFromDoc);
             logger.info("Success");
         }
         catch(IOException e) {
             logger.error(e.toString());
         }
+    }
+
+    public static boolean isLetter(String name) {
+        return name.matches("[a-zA-Zа-яА-Я]+");
     }
 }
