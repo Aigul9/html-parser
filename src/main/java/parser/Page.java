@@ -8,9 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+import static parser.Constants.*;
+
 public class Page implements PageActions {
-    private String pageUrl = "https://www.simbirsoft.com/";
-    private int timeout = 10000;
+    private String pageUrl = PAGE_URL;
+    private int timeout = TIMEOUT;
 
     public Page() { }
 
@@ -45,8 +47,7 @@ public class Page implements PageActions {
             Document pageContent = Jsoup.connect(pageUrl).timeout(timeout).get();
             System.out.println(timeout);
             results.put("Content", pageContent.body().text());
-        }
-        catch(IOException | IllegalArgumentException e) {
+        } catch(IOException | IllegalArgumentException e) {
             results.put("Status", e.toString());
         }
 

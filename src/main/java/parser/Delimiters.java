@@ -1,11 +1,11 @@
 package parser;
 
-public class Delimiters {
-    private String delimiters;
+import static parser.Constants.*;
 
-    public Delimiters() {
-        this.delimiters = "[\s\n\t\r,.!?;:\"\\[\\]()]+";
-    }
+public class Delimiters {
+    private String delimiters = DELIMITERS;
+
+    public Delimiters() { }
 
     public Delimiters(String delimiters) {
         this.delimiters = delimiters;

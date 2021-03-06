@@ -3,11 +3,13 @@ package parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static parser.Constants.*;
+
 public class Log {
     private static Logger logger;
 
     public Log() {
-        String defaultName = "parser";
+        String defaultName = LOGGER_NAME;
         logger = setName(defaultName);
     }
 
