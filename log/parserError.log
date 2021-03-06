@@ -11,3 +11,9 @@
 2021-03-06_22:08:18.715 [main] INFO  parser - Success
 2021-03-06_22:10:17.694 [main] INFO  parser - Success
 2021-03-06_22:10:32.524 [main] INFO  parser - Success
+2021-03-06_23:23:35.794 [main] ERROR parser - java.net.UnknownHostException: www.simbirsoft.como
+2021-03-07_00:17:21.008 [main] ERROR parser - java.net.ConnectException: Connection refused: no further information
+2021-03-07_00:19:18.439 [main] ERROR parser - java.net.ConnectException: Connection refused: connect
+2021-03-07_00:19:44.321 [main] ERROR parser - java.net.ConnectException: Connection refused: no further information
+2021-03-07_00:22:37.715 [main] ERROR parser - java.net.UnknownHostException: forums.hmn.ru
+2021-03-07_00:33:07.604 [main] ERROR parser - java.lang.IllegalArgumentException: Must supply a valid URL
