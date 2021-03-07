@@ -3,11 +3,12 @@ package parser;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.apache.commons.lang.StringUtils;
+import service.Log;
 
 import java.io.IOException;
 import java.util.TreeMap;
 
-import static parser.Constants.*;
+import static env.Constants.*;
 
 /** Class that represents a page with properties: pageUrl and timeout -
  * and allows to read its content and count number of words on the page.

@@ -1,9 +1,11 @@
-package parser;
+package service;
+
+import parser.Actions;
 
 import java.sql.*;
 import java.util.*;
 
-import static parser.Constants.*;
+import static env.Constants.*;
 
 /** Class that allows to perform different operations with database with properties:
  * <b>db</b>, <b>username</b>, <b>password</b>, <b>conn</b>.

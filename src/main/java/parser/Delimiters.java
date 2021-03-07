@@ -1,6 +1,6 @@
 package parser;
 
-import static parser.Constants.*;
+import static env.Constants.*;
 
 /** Class that contains string of delimiters.
  */

@@ -1,9 +1,9 @@
-package parser;
+package service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static parser.Constants.*;
+import static env.Constants.*;
 
 /** Class that provides logging.
  */
