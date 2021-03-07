@@ -5,12 +5,12 @@ import static parser.Constants.*;
 /** Class that contains string of delimiters.
  */
 public class Delimiters {
-    private String delimiters = DELIMITERS;
+    private String delimiters = format(DELIMITERS);
 
     public Delimiters() { }
 
     public Delimiters(String delimiters) {
-        this.delimiters = delimiters;
+        this.delimiters = format(delimiters);
     }
 
     public String getDelimiters() {
@@ -18,7 +18,11 @@ public class Delimiters {
     }
 
     public void setDelimiters(String delimiters) {
-        this.delimiters = delimiters;
+        this.delimiters = format(delimiters);
+    }
+
+    private String format(String delimiters) {
+        return String.format("%s%s%s", "[", delimiters, "]+");
     }
 
     public String[] splitPage(String textFromDoc) {

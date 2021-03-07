@@ -2,6 +2,7 @@ package parser;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.apache.commons.lang.StringUtils;
 
 import java.io.IOException;
 import java.util.TreeMap;
@@ -71,23 +72,15 @@ public class Page implements Actions {
         }
     }
 
-    /** Checks if given parameter contains in english or russian alphabet.
-     * @param name Word that has to be checked.
-     * @return Boolean value: whether the word is appropriate for further processing.
-     */
-    public boolean isLetter(String name) {
-        return name.matches("[a-zA-Zа-яА-Я]+");
-    }
-
     /** Counts amount of each word on the page.
      * @param splitArray Array of all words.
      * @return Map with properties: word and amount.
      */
-    public TreeMap<String, Integer> countWords(String[] splitArray) {
+    public static TreeMap<String, Integer> countWords(String[] splitArray) {
         TreeMap<String, Integer> words = new TreeMap<>();
 
         for (String nextString : splitArray) {
-            if (!isLetter(nextString)) {
+            if (!StringUtils.isAlpha(nextString)) {
                 continue;
             }
 

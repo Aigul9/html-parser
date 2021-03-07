@@ -4,7 +4,7 @@ public class Constants {
     public static final String PAGE_URL = "https://www.simbirsoft.com/";
     public static final int TIMEOUT = 10000;
 
-    public static final String DELIMITERS = "[\s\n\t\r,.!?;:\"\\[\\]()]+";
+    public static final String DELIMITERS = "\s\n\t\r,.!?;:\"\\[\\]()";
 
     public static final String LOGGER_NAME = "parser";
 
