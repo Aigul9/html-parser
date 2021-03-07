@@ -17,3 +17,75 @@
 2021-03-07_00:19:44.321 [main] ERROR parser - java.net.ConnectException: Connection refused: no further information
 2021-03-07_00:22:37.715 [main] ERROR parser - java.net.UnknownHostException: forums.hmn.ru
 2021-03-07_00:33:07.604 [main] ERROR parser - java.lang.IllegalArgumentException: Must supply a valid URL
+2021-03-07_13:05:24.047 [main] ERROR parser - java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbf'
+2021-03-07_13:59:13.982 [main] ERROR parser - java.sql.SQLSyntaxErrorException: Unknown database 'parsingjdb'
+2021-03-07_13:59:13.984 [main] ERROR parser - Unknown database 'parsingjdb'
+2021-03-07_14:20:18.645 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:21:47.993 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:22:55.497 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:23:06.283 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:25:33.941 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:25:47.235 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:25:57.909 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:29:16.185 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: getFromDB
+2021-03-07_14:30:41.729 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: [Ljava.lang.StackTraceElement;@2892d68
+2021-03-07_14:31:33.740 [main] ERROR parser - [Ljava.lang.StackTraceElement;@5ab956d7
+2021-03-07_14:33:47.234 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.createStatement(ConnectionImpl.java:1099)
+	at com.mysql.cj.jdbc.ConnectionImpl.createStatement(ConnectionImpl.java:1089)
+	at parser.DB.getFromDB(DB.java:72)
+	at parser.GetStats.main(GetStats.java:16)
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:573)
+	at com.mysql.cj.jdbc.ConnectionImpl.createStatement(ConnectionImpl.java)
+	... 3 more
+
+2021-03-07_14:44:20.153 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: createSQLException
+2021-03-07_14:44:49.197 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+2021-03-07_14:45:02.377 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: [Ljava.lang.StackTraceElement;@d86a6f
+2021-03-07_14:45:13.264 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2021-03-07_14:47:05.570 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2021-03-07_14:47:43.330 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2021-03-07_14:47:50.097 [main] ERROR parser - java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.: com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2021-03-07_14:49:28.898 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:50:27.977 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:50:53.021 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:51:05.152 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:51:32.558 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:53:21.786 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:58:03.059 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:59:48.641 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_14:59:56.859 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:00:20.546 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:01:20.713 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:03:05.153 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:07:19.576 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:07:48.976 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:09:07.098 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:09:56.956 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:09:56.958 [main] ERROR parser - main: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:10:10.319 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:10:10.322 [main] ERROR parser - main: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:10:27.398 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:10:27.400 [main] ERROR parser - main: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:10:36.431 [main] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:10:36.434 [main] ERROR parser - main: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:15:05.824 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:17:06.567 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-07_15:19:46.275 [main] ERROR parser - deleteFromDB: java.sql.SQLException: Can not issue data manipulation statements with executeQuery().
+2021-03-07_15:20:56.361 [main] ERROR parser - deleteFromDB: java.sql.SQLException: Can not issue data manipulation statements with executeQuery().

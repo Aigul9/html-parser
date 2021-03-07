@@ -11,4 +11,5 @@ public class Constants {
     public static final String DB = "jdbc:mysql://localhost:3306/parsingDB";
     public static final String USERNAME = "root";
     public static final String PASSWORD = "root";
+    public static final String TABLE_NAME = "wordscount";
 }

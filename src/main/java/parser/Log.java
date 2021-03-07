@@ -5,31 +5,11 @@ import org.slf4j.LoggerFactory;
 
 import static parser.Constants.*;
 
-public class Log {
-    private static Logger logger;
+public  class Log {
+    private static final Logger logger = LoggerFactory.getLogger(LOGGER_NAME);
 
-    public Log() {
-        String defaultName = LOGGER_NAME;
-        logger = setName(defaultName);
-    }
-
-    public Log(String name) {
-        setLogger(name);
-    }
-
-    private Logger setName(String name) {
-        return LoggerFactory.getLogger(name);
-    }
-
-    public Logger getLogger() {
-        return logger;
-    }
-
-    public void setLogger(String name) {
-        logger = setName(name);
-    }
-
-    public void logError(String message) {
-        logger.error(message);
+    public static void logError(Exception exception) {
+        String method = Thread.currentThread().getStackTrace()[2].getMethodName();
+        logger.error(String.format("%s: %s", method, exception.toString()));
     }
 }

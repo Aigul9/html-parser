@@ -4,13 +4,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.TreeMap;
 
 import static parser.Constants.*;
 
-public class Page implements PageActions {
+public class Page implements Actions {
     private String pageUrl = PAGE_URL;
     private int timeout = TIMEOUT;
 
@@ -37,28 +35,20 @@ public class Page implements PageActions {
         this.pageUrl = url;
     }
 
-    @Override
-    public Map<String, String> getPage() {
-        Map<String, String> results = new HashMap<>();
-        results.put("Content", "");
-        results.put("Status", "Success");
-
+    public String getPage() {
         try {
             Document pageContent = Jsoup.connect(pageUrl).timeout(timeout).get();
-            System.out.println(timeout);
-            results.put("Content", pageContent.body().text());
+            return pageContent.body().text();
         } catch(IOException | IllegalArgumentException e) {
-            results.put("Status", e.toString());
+            Log.logError(e);
+            return null;
         }
-
-        return results;
     }
 
     public boolean isLetter(String name) {
         return name.matches("[a-zA-Zа-яА-Я]+");
     }
 
-    @Override
     public TreeMap<String, Integer> countWords(String[] splitArray) {
         TreeMap<String, Integer> words = new TreeMap<>();
 
@@ -77,12 +67,5 @@ public class Page implements PageActions {
         }
 
         return words;
-    }
-
-    @Override
-    public void display(Map<String, Integer> words) {
-        for (Map.Entry<String, Integer> word: words.entrySet()) {
-            System.out.printf("%s - %s%n", word.getKey(), word.getValue());
-        }
     }
 }
