@@ -10,25 +10,16 @@ public class GetStats {
         try {
             String pageContent = page.getPage();
             Map<String, Integer> words = page.countWords(delimiters.splitPage(pageContent));
-//            page.display();
+            page.display(words);
 
-            DB db = new DB();
+//            DB db = new DB();
 //            db.writeToDB(words);
+////            db.getFromDB();
+//            db.deleteFromDB();
 //            db.getFromDB();
-            db.deleteFromDB();
-            db.getFromDB();
-            db.close();
+//            db.close();
         } catch(Exception e) {
             Log.logError(e);
         }
-
-
-
-//        if (db_res.equals("OK")) {
-//            System.out.println("OK");
-//        }
-//        else {
-//            logger.logError(db_res);
-//        }
     }
 }

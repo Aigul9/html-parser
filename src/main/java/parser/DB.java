@@ -1,13 +1,14 @@
 package parser;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.sql.*;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 import static parser.Constants.*;
 
+/** Class that allows to perform different operations with database with properties:
+ * <b>db</b>, <b>username</b>, <b>password</b>, <b>conn</b>.
+ * @author Aigul Sibgatullina
+ */
 public class DB implements Actions {
     private String db = DB;
     private String username = USERNAME;

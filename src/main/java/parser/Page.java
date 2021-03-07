@@ -8,47 +8,81 @@ import java.util.TreeMap;
 
 import static parser.Constants.*;
 
+/** Class that represents a page with properties: pageUrl and timeout -
+ * and allows to read its content and count number of words on the page.
+ */
 public class Page implements Actions {
+    /** Url of the HTML-page. */
     private String pageUrl = PAGE_URL;
+    /** Idle time. */
     private int timeout = TIMEOUT;
 
+    /** Creates new page with default url and timeout. */
     public Page() { }
 
+    /** Creates new page with given url.
+     * @param url Url of the HTML-page.
+     */
     public Page(String url) {
         this.pageUrl = url;
     }
 
+    /** Creates new page with given timeout.
+     * @param timeout Idle time.
+     */
     public Page(int timeout) {
         this.timeout = timeout;
     }
 
+    /** Creates new Page with given url and timeout.
+     * @param url Url of the HTML-page.
+     * @param timeout Idle time.
+     */
     public Page(String url, int timeout) {
         this.pageUrl = url;
         this.timeout = timeout;
     }
 
+    /** Gets url of the page.
+     * @return Page's url in a string format.
+     */
     public String getPageUrl() {
         return pageUrl;
     }
 
+    /** Changes url of the page.
+     * @param url Url of the HTML-page.
+     */
     public void setPageUrl(String url) {
         this.pageUrl = url;
     }
 
+    /** Gets text content of the page.
+     * @return Content of the page in a string format.
+     * @exception IllegalArgumentException If pageUrl is not valid.
+     */
     public String getPage() {
         try {
             Document pageContent = Jsoup.connect(pageUrl).timeout(timeout).get();
             return pageContent.body().text();
-        } catch(IOException | IllegalArgumentException e) {
+        } catch(IllegalArgumentException | IOException e) {
             Log.logError(e);
             return null;
         }
     }
 
+    /** Checks if given parameter contains in english or russian alphabet.
+     * @param name Word that has to be checked.
+     * @return Boolean value: whether the word is appropriate for further processing.
+     */
     public boolean isLetter(String name) {
         return name.matches("[a-zA-Zа-яА-Я]+");
     }
 
+    /** Counts amount of each word on the page.
+     * @param splitArray Array of all words.
+     * @return Map with properties: word and amount.
+     */
     public TreeMap<String, Integer> countWords(String[] splitArray) {
         TreeMap<String, Integer> words = new TreeMap<>();
 

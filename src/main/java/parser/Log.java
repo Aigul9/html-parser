@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 
 import static parser.Constants.*;
 
+/** Class that provides logging.
+ */
 public  class Log {
     private static final Logger logger = LoggerFactory.getLogger(LOGGER_NAME);
 

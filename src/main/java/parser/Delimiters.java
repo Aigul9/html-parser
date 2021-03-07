@@ -2,6 +2,8 @@ package parser;
 
 import static parser.Constants.*;
 
+/** Class that contains string of delimiters.
+ */
 public class Delimiters {
     private String delimiters = DELIMITERS;
 
