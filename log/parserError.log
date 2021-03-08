@@ -89,3 +89,4 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2021-03-07_15:17:06.567 [main] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
 2021-03-07_15:19:46.275 [main] ERROR parser - deleteFromDB: java.sql.SQLException: Can not issue data manipulation statements with executeQuery().
 2021-03-07_15:20:56.361 [main] ERROR parser - deleteFromDB: java.sql.SQLException: Can not issue data manipulation statements with executeQuery().
+2021-03-08_23:14:02.642 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.conn" is null

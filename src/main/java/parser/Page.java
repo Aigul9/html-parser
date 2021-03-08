@@ -1,16 +1,17 @@
 package parser;
 
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.apache.commons.lang.StringUtils;
-import service.Log;
+import services.Log;
 
 import java.io.IOException;
 import java.util.TreeMap;
 
 import static env.Constants.*;
 
-/** Class that represents a page with properties: pageUrl and timeout -
+/** Represents a page with properties: pageUrl and timeout -
  * and allows to read its content and count number of words on the page.
  */
 public class Page implements Actions {
@@ -65,7 +66,11 @@ public class Page implements Actions {
      */
     public String getPage() {
         try {
+            Connection.Response resp = Jsoup.connect(pageUrl).method(Connection.Method.HEAD).execute();
+            String length = resp.header("Content-Length");
+            System.out.println(length);
             Document pageContent = Jsoup.connect(pageUrl).timeout(timeout).get();
+            System.out.println(pageContent.outerHtml().length());
             return pageContent.body().text();
         } catch(IllegalArgumentException | IOException e) {
             Log.logError(e);
@@ -74,7 +79,7 @@ public class Page implements Actions {
     }
 
     /** Counts amount of each word on the page.
-     * @param splitArray Array of all words.
+     * @param splitArray Array of strings.
      * @return Map with properties: word and amount.
      */
     public static TreeMap<String, Integer> countWords(String[] splitArray) {

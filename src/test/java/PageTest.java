@@ -11,8 +11,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.*;
 
+/** Contains test cases.
+ */
 public class PageTest {
 
+    /** Checks correctness of split method.
+     */
     @Test
     public void testSplitPage() {
         String initialText = "Services include art direction, UX & UI design; design systems.";
@@ -31,6 +35,8 @@ public class PageTest {
         Assert.assertArrayEquals(expected, delimiters.splitPage(initialText));
     }
 
+    /** Checks correctness of counting method.
+     */
     @Test
     public void testCountWords() {
         String[] words = {"Мы", "мы", "МЫ", "мЫ", "предлагаем", "услуги", "по", "услуги"};
