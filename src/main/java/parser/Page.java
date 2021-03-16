@@ -1,14 +1,11 @@
 package parser;
 
-import org.jsoup.Connection;
+import java.io.*;
+
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.apache.commons.lang.StringUtils;
+import org.jsoup.nodes.*;
+
 import services.Log;
-
-import java.io.IOException;
-import java.util.TreeMap;
-
 import static env.Constants.*;
 
 /** Represents a page with properties: pageUrl and timeout -
@@ -66,39 +63,12 @@ public class Page implements Actions {
      */
     public String getPage() {
         try {
-            Connection.Response resp = Jsoup.connect(pageUrl).method(Connection.Method.HEAD).execute();
-            String length = resp.header("Content-Length");
-            System.out.println(length);
-            Document pageContent = Jsoup.connect(pageUrl).timeout(timeout).get();
-            System.out.println(pageContent.outerHtml().length());
+            Document pageContent = Jsoup.connect(pageUrl).maxBodySize(0).timeout(timeout).get();
+            Actions.disjoinElems(pageContent.select("*"));
             return pageContent.body().text();
         } catch(IllegalArgumentException | IOException e) {
-            Log.logError(e);
+            Log.logError(e.toString());
             return null;
         }
-    }
-
-    /** Counts amount of each word on the page.
-     * @param splitArray Array of strings.
-     * @return Map with properties: word and amount.
-     */
-    public static TreeMap<String, Integer> countWords(String[] splitArray) {
-        TreeMap<String, Integer> words = new TreeMap<>();
-
-        for (String nextString : splitArray) {
-            if (!StringUtils.isAlpha(nextString)) {
-                continue;
-            }
-
-            Integer count = words.get(nextString.toLowerCase());
-
-            if (count == null) {
-                count = 1;
-            } else count += 1;
-
-            words.put(nextString.toLowerCase(), count);
-        }
-
-        return words;
     }
 }

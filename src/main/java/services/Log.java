@@ -12,10 +12,10 @@ public class Log {
     /** Tracks errors based on a configuration in logback.xml.
      * Gets method name that threw an exception and exception message and
      * passes this data to a logger.
-     * @param exception Thrown exception.
+     * @param msg Error message.
      */
-    public static void logError(Exception exception) {
+    public static void logError(String msg) {
         String method = Thread.currentThread().getStackTrace()[2].getMethodName();
-        logger.error(String.format("%s: %s", method, exception.toString()));
+        logger.error(String.format("%s: %s", method, msg));
     }
 }

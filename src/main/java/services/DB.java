@@ -1,10 +1,9 @@
 package services;
 
-import parser.Actions;
-
 import java.sql.*;
 import java.util.*;
 
+import parser.Actions;
 import static env.Constants.*;
 
 /** Allows to perform operations with database that have following properties:
@@ -51,7 +50,7 @@ public class DB implements Actions {
         try (Connection conn = DriverManager.getConnection(db, username, password)) {
             this.conn = conn;
         } catch (SQLException e) {
-            services.Log.logError(e);
+            services.Log.logError(e.toString());
         }
     }
 
@@ -61,7 +60,7 @@ public class DB implements Actions {
         try {
             conn.close();
         } catch (SQLException e) {
-            services.Log.logError(e);
+            services.Log.logError(e.toString());
         }
     }
 
@@ -81,7 +80,7 @@ public class DB implements Actions {
 
             stmt.close();
         } catch (SQLException e) {
-            services.Log.logError(e);
+            services.Log.logError(e.toString());
         }
     }
 
@@ -98,7 +97,7 @@ public class DB implements Actions {
                     words.put(res.getString("word"), res.getInt("amount"));
                 }
 
-                display(words);
+                Actions.display(words);
             } else {
                 System.out.println("No results");
             }
@@ -106,7 +105,7 @@ public class DB implements Actions {
             stmt.close();
             res.close();
         } catch (SQLException e) {
-            services.Log.logError(e);
+            services.Log.logError(e.toString());
         }
     }
 
@@ -120,7 +119,7 @@ public class DB implements Actions {
 
             stmt.close();
         } catch (SQLException e) {
-            Log.logError(e);
+            Log.logError(e.toString());
         }
     }
 }

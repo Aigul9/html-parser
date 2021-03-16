@@ -3,6 +3,7 @@ import org.junit.jupiter.api.*;
 import org.junit.Assert;
 
 import org.hamcrest.collection.IsMapContaining;
+import parser.Actions;
 import parser.Delimiters;
 import parser.Page;
 
@@ -46,7 +47,7 @@ public class PageTest {
                 "предлагаем", 1,
                 "услуги", 2
         );
-        Map<String, Integer> res = Page.countWords(words);
+        Map<String, Integer> res = Actions.countWords(words);
 
         assertThat(res.size(), is(4));
         assertThat(res, IsMapContaining.hasEntry("мы", 4));

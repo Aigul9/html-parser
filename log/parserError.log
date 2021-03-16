@@ -90,3 +90,158 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2021-03-07_15:19:46.275 [main] ERROR parser - deleteFromDB: java.sql.SQLException: Can not issue data manipulation statements with executeQuery().
 2021-03-07_15:20:56.361 [main] ERROR parser - deleteFromDB: java.sql.SQLException: Can not issue data manipulation statements with executeQuery().
 2021-03-08_23:14:02.642 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.conn" is null
+2021-03-09_23:55:11.696 [main] ERROR parser - getPage: java.lang.IllegalArgumentException: Malformed URL: vk.com
+2021-03-09_23:55:11.705 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-09_23:55:43.328 [main] ERROR parser - getPage: java.lang.IllegalArgumentException: Malformed URL: www.vk.com
+2021-03-09_23:55:43.331 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-09_23:55:56.810 [main] ERROR parser - getPage: org.jsoup.HttpStatusException: HTTP error fetching URL. Status=418, URL=https://www.vk.com
+2021-03-09_23:55:56.813 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-09_23:56:58.360 [main] ERROR parser - getPage: org.jsoup.HttpStatusException: HTTP error fetching URL. Status=418, URL=https://vk.com/feed
+2021-03-09_23:56:58.361 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-10_00:01:26.591 [main] ERROR parser - getPage: org.jsoup.HttpStatusException: HTTP error fetching URL. Status=418, URL=https://vk.com/feed
+2021-03-10_00:01:26.593 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-10_00:06:15.229 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "java.net.HttpURLConnection.getHeaderField(String)" is null
+2021-03-10_00:06:36.991 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "java.net.HttpURLConnection.getHeaderField(String)" is null
+2021-03-10_00:22:36.941 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "java.net.HttpURLConnection.getHeaderField(String)" is null
+2021-03-10_00:22:53.694 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "java.net.HttpURLConnection.getHeaderField(String)" is null
+2021-03-10_00:24:09.597 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "java.net.HttpURLConnection.getHeaderField(String)" is null
+2021-03-10_00:28:50.811 [main] ERROR parser - main: java.lang.IllegalStateException: Already connected
+2021-03-10_00:29:26.655 [main] ERROR parser - main: java.lang.IllegalStateException: Already connected
+2021-03-10_00:29:48.823 [main] ERROR parser - main: java.lang.IllegalStateException: Already connected
+2021-03-10_00:30:22.993 [main] ERROR parser - main: java.lang.IllegalStateException: Already connected
+2021-03-12_18:31:16.915 [main] ERROR parser - getPage: page: 111226
+2021-03-12_18:31:16.919 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:31:16.920 [main] ERROR parser - getPage: free: 254109984
+2021-03-12_18:31:16.920 [main] ERROR parser - getPage: available: 4265688392
+2021-03-12_18:31:23.975 [main] ERROR parser - getPage: page: 122067
+2021-03-12_18:31:23.977 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:31:23.977 [main] ERROR parser - getPage: free: 254571008
+2021-03-12_18:31:23.977 [main] ERROR parser - getPage: available: 4265688400
+2021-03-12_18:32:03.495 [main] ERROR parser - getPage: page: 111218
+2021-03-12_18:32:03.497 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:32:03.497 [main] ERROR parser - getPage: free: 254563328
+2021-03-12_18:32:03.497 [main] ERROR parser - getPage: available: 4265688200
+2021-03-12_18:37:04.297 [main] ERROR parser - getPage: page: 1
+2021-03-12_18:37:04.299 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:37:04.299 [main] ERROR parser - getPage: free: 255781480
+2021-03-12_18:37:04.299 [main] ERROR parser - getPage: available: 4265688360
+2021-03-12_18:37:38.068 [main] ERROR parser - getPage: page: 100
+2021-03-12_18:37:38.069 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:37:38.070 [main] ERROR parser - getPage: free: 255354544
+2021-03-12_18:37:38.070 [main] ERROR parser - getPage: available: 4265688240
+2021-03-12_18:37:48.953 [main] ERROR parser - getPage: page: 1000
+2021-03-12_18:37:48.956 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:37:48.956 [main] ERROR parser - getPage: free: 255346624
+2021-03-12_18:37:48.956 [main] ERROR parser - getPage: available: 4265688256
+2021-03-12_18:37:57.257 [main] ERROR parser - getPage: page: 10000
+2021-03-12_18:37:57.259 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:37:57.260 [main] ERROR parser - getPage: free: 255298776
+2021-03-12_18:37:57.260 [main] ERROR parser - getPage: available: 4265688256
+2021-03-12_18:38:05.317 [main] ERROR parser - getPage: page: 100000
+2021-03-12_18:38:05.319 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:38:05.319 [main] ERROR parser - getPage: free: 254112960
+2021-03-12_18:38:05.319 [main] ERROR parser - getPage: available: 4265688224
+2021-03-12_18:38:17.622 [main] ERROR parser - getPage: page: 50000
+2021-03-12_18:38:17.624 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:38:17.625 [main] ERROR parser - getPage: free: 254788400
+2021-03-12_18:38:17.625 [main] ERROR parser - getPage: available: 4265688288
+2021-03-12_18:38:26.324 [main] ERROR parser - getPage: page: 80000
+2021-03-12_18:38:26.326 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:38:26.326 [main] ERROR parser - getPage: free: 254764600
+2021-03-12_18:38:26.326 [main] ERROR parser - getPage: available: 4265688256
+2021-03-12_18:39:18.105 [main] ERROR parser - getPage: page: 81000
+2021-03-12_18:39:18.107 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:39:18.108 [main] ERROR parser - getPage: free: 254759568
+2021-03-12_18:39:18.108 [main] ERROR parser - getPage: available: 4265688224
+2021-03-12_18:39:27.579 [main] ERROR parser - getPage: page: 85000
+2021-03-12_18:39:27.582 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:39:27.582 [main] ERROR parser - getPage: free: 254767440
+2021-03-12_18:39:27.583 [main] ERROR parser - getPage: available: 4265688264
+2021-03-12_18:39:39.134 [main] ERROR parser - getPage: page: 84000
+2021-03-12_18:39:39.135 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:39:39.136 [main] ERROR parser - getPage: free: 254776144
+2021-03-12_18:39:39.136 [main] ERROR parser - getPage: available: 4265688328
+2021-03-12_18:39:48.680 [main] ERROR parser - getPage: page: 85000
+2021-03-12_18:39:48.682 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:39:48.682 [main] ERROR parser - getPage: free: 254763800
+2021-03-12_18:39:48.683 [main] ERROR parser - getPage: available: 4265688240
+2021-03-12_18:39:56.724 [main] ERROR parser - getPage: page: 83000
+2021-03-12_18:39:56.726 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:39:56.727 [main] ERROR parser - getPage: free: 254765944
+2021-03-12_18:39:56.727 [main] ERROR parser - getPage: available: 4265688256
+2021-03-12_18:40:06.366 [main] ERROR parser - getPage: page: 82000
+2021-03-12_18:40:06.368 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:40:06.368 [main] ERROR parser - getPage: free: 254145216
+2021-03-12_18:40:06.368 [main] ERROR parser - getPage: available: 4265688368
+2021-03-12_18:40:13.756 [main] ERROR parser - getPage: page: 82500
+2021-03-12_18:40:13.758 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:40:13.758 [main] ERROR parser - getPage: free: 254757440
+2021-03-12_18:40:13.758 [main] ERROR parser - getPage: available: 4265688224
+2021-03-12_18:40:21.655 [main] ERROR parser - getPage: page: 82750
+2021-03-12_18:40:21.657 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:40:21.658 [main] ERROR parser - getPage: free: 254775096
+2021-03-12_18:40:21.658 [main] ERROR parser - getPage: available: 4265688224
+2021-03-12_18:40:30.465 [main] ERROR parser - getPage: page: 82600
+2021-03-12_18:40:30.469 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:40:30.469 [main] ERROR parser - getPage: free: 254769944
+2021-03-12_18:40:30.469 [main] ERROR parser - getPage: available: 4265688256
+2021-03-12_18:40:37.921 [main] ERROR parser - getPage: page: 82650
+2021-03-12_18:40:37.923 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:40:37.923 [main] ERROR parser - getPage: free: 254731824
+2021-03-12_18:40:37.924 [main] ERROR parser - getPage: available: 4265688240
+2021-03-12_18:40:45.480 [main] ERROR parser - getPage: page: 82700
+2021-03-12_18:40:45.482 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:40:45.483 [main] ERROR parser - getPage: free: 254754096
+2021-03-12_18:40:45.483 [main] ERROR parser - getPage: available: 4265688296
+2021-03-12_18:40:52.807 [main] ERROR parser - getPage: page: 82690
+2021-03-12_18:40:52.811 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:40:52.811 [main] ERROR parser - getPage: free: 254756504
+2021-03-12_18:40:52.812 [main] ERROR parser - getPage: available: 4265688224
+2021-03-12_18:41:00.038 [main] ERROR parser - getPage: page: 82680
+2021-03-12_18:41:00.041 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:41:00.041 [main] ERROR parser - getPage: free: 254769048
+2021-03-12_18:41:00.041 [main] ERROR parser - getPage: available: 4265688256
+2021-03-12_18:41:08.572 [main] ERROR parser - getPage: page: 82683
+2021-03-12_18:41:08.575 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:41:08.575 [main] ERROR parser - getPage: free: 254779048
+2021-03-12_18:41:08.576 [main] ERROR parser - getPage: available: 4265688224
+2021-03-12_18:41:17.634 [main] ERROR parser - getPage: page: 82683
+2021-03-12_18:41:17.636 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:41:17.636 [main] ERROR parser - getPage: free: 254773816
+2021-03-12_18:41:17.636 [main] ERROR parser - getPage: available: 4265688384
+2021-03-12_18:41:21.827 [main] ERROR parser - getPage: page: 82683
+2021-03-12_18:41:21.829 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:41:21.829 [main] ERROR parser - getPage: free: 254500288
+2021-03-12_18:41:21.829 [main] ERROR parser - getPage: available: 4265688264
+2021-03-12_18:41:27.372 [main] ERROR parser - getPage: page: 82683
+2021-03-12_18:41:27.374 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:41:27.374 [main] ERROR parser - getPage: free: 254779880
+2021-03-12_18:41:27.374 [main] ERROR parser - getPage: available: 4265688368
+2021-03-12_18:41:38.643 [main] ERROR parser - getPage: page: 1
+2021-03-12_18:41:38.646 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:41:38.646 [main] ERROR parser - getPage: free: 255792424
+2021-03-12_18:41:38.646 [main] ERROR parser - getPage: available: 4265688256
+2021-03-12_18:41:46.265 [main] ERROR parser - getPage: page: 2
+2021-03-12_18:41:46.267 [main] ERROR parser - getPage: total: 268435456
+2021-03-12_18:41:46.267 [main] ERROR parser - getPage: free: 256011616
+2021-03-12_18:41:46.268 [main] ERROR parser - getPage: available: 4265688256
+2021-03-13_12:00:46.398 [main] ERROR parser - getPage: page: 120465
+2021-03-13_12:00:46.415 [main] ERROR parser - getPage: total: 268435456
+2021-03-13_12:00:46.415 [main] ERROR parser - getPage: free: 254388736
+2021-03-13_12:00:46.416 [main] ERROR parser - getPage: available: 4265688312
+2021-03-13_12:01:52.047 [main] ERROR parser - getPage: java.lang.IllegalArgumentException: Input stream already read and parsed, cannot re-read.
+2021-03-13_12:01:52.056 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-13_12:02:20.668 [main] ERROR parser - getPage: org.jsoup.UnsupportedMimeTypeException: Unhandled content type. Must be text/*, application/xml, or application/*+xml. Mimetype=image/jpeg, URL=https://i.imgur.com/z4d4kWk.jpg
+2021-03-13_12:02:20.670 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-13_16:13:01.196 [main] ERROR parser - main: java.lang.StringIndexOutOfBoundsException: begin 5, end -1, length 11012
+2021-03-13_20:35:17.355 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "org.jsoup.nodes.Element.toString()" because the return value of "org.jsoup.nodes.Document.body()" is null
+2021-03-13_20:45:19.797 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "org.jsoup.nodes.Element.toString()" because the return value of "org.jsoup.nodes.Document.body()" is null
+2021-03-13_21:05:54.903 [main] ERROR parser - getPage: java.lang.IllegalArgumentException: Input stream already read and parsed, cannot re-read.
+2021-03-16_21:47:52.373 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "org.jsoup.nodes.Element.text()" because the return value of "org.jsoup.nodes.Document.body()" is null
+2021-03-16_21:49:57.300 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "org.jsoup.nodes.Element.text()" because the return value of "org.jsoup.nodes.Document.body()" is null
+2021-03-16_21:50:04.078 [main] ERROR parser - main: java.lang.NullPointerException: Cannot invoke "org.jsoup.nodes.Element.text()" because the return value of "org.jsoup.nodes.Document.body()" is null
+2021-03-17_01:01:04.774 [AWT-EventQueue-0] ERROR parser - getPage: javax.net.ssl.SSLException: Received fatal alert: internal_error
+2021-03-17_01:01:37.125 [AWT-EventQueue-0] ERROR parser - getPage: java.net.UnknownHostException: www.googleco
+2021-03-17_01:04:02.221 [AWT-EventQueue-0] ERROR parser - getPage: java.net.UnknownHostException: www.googlecom
+2021-03-17_01:05:03.964 [AWT-EventQueue-0] ERROR parser - getPage: java.net.UnknownHostException: www.googlecom
+2021-03-17_01:05:03.965 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null

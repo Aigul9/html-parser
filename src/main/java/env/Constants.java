@@ -4,7 +4,7 @@ package env;
  */
 public class Constants {
     /** Url of the HTML-page. */
-    public static final String PAGE_URL = "https://www.simbirsoft.com/";
+    public static final String PAGE_URL = "https://www.google.com/";
     /** Idle time. */
     public static final int TIMEOUT = 10000;
     /** String of delimiters. */
