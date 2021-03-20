@@ -245,3 +245,40 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2021-03-17_01:04:02.221 [AWT-EventQueue-0] ERROR parser - getPage: java.net.UnknownHostException: www.googlecom
 2021-03-17_01:05:03.964 [AWT-EventQueue-0] ERROR parser - getPage: java.net.UnknownHostException: www.googlecom
 2021-03-17_01:05:03.965 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-20_13:10:48.578 [AWT-EventQueue-0] ERROR parser - getPage: java.net.ConnectException: Connection refused: no further information
+2021-03-20_13:10:48.682 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-20_13:11:33.157 [AWT-EventQueue-0] ERROR parser - getPage: java.lang.IllegalArgumentException: Malformed URL: htt
+2021-03-20_13:11:33.157 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "String.split(String)" because "textFromDoc" is null
+2021-03-20_21:34:41.093 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+2021-03-20_21:35:53.763 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+2021-03-20_21:37:52.668 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-20_21:39:41.849 [AWT-EventQueue-0] ERROR parser - createNewTable: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-20_21:39:41.851 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-20_21:42:48.380 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.conn" is null
+2021-03-20_21:46:17.660 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.conn" is null
+2021-03-20_21:46:55.212 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.conn" is null
+2021-03-20_21:49:17.387 [AWT-EventQueue-0] ERROR parser - callingBack: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.conn" is null
+2021-03-20_21:49:40.276 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-20_21:53:03.394 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-20_21:54:48.791 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2021-03-20_22:05:21.585 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLException: Field 'id' doesn't have a default value
+2021-03-20_22:08:04.452 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLException: Field 'id' doesn't have a default value
+2021-03-20_22:08:15.154 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLException: Field 'id' doesn't have a default value
+2021-03-20_22:09:07.167 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLException: Field 'id' doesn't have a default value
+2021-03-20_22:09:48.974 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLException: Field 'id' doesn't have a default value
+2021-03-20_22:11:14.010 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLException: Field 'id' doesn't have a default value
+2021-03-20_22:14:18.399 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLSyntaxErrorException: Table 'parsingdb.wordscount' doesn't exist
+2021-03-20_22:14:18.406 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Table 'parsingdb.wordscount' doesn't exist
+2021-03-20_22:15:22.648 [AWT-EventQueue-0] ERROR parser - createNewTable: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'autoincrement,word nvarchar(255),amount int(10))' at line 1
+2021-03-20_22:15:22.659 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLSyntaxErrorException: Table 'parsingdb.wordscount' doesn't exist
+2021-03-20_22:15:22.663 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Table 'parsingdb.wordscount' doesn't exist
+2021-03-20_22:17:58.409 [AWT-EventQueue-0] ERROR parser - createNewTable: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'autoincrement,word nvarchar(255),amount int(10))' at line 1
+2021-03-20_22:17:58.420 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLSyntaxErrorException: Table 'parsingdb.wordscount' doesn't exist
+2021-03-20_22:17:58.424 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Table 'parsingdb.wordscount' doesn't exist
+2021-03-20_22:37:36.257 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
+2021-03-20_22:46:22.435 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
+2021-03-20_22:46:22.438 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
+2021-03-20_22:47:44.052 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
+2021-03-20_22:47:44.055 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
+2021-03-20_22:48:16.938 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
+2021-03-20_22:48:16.942 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'

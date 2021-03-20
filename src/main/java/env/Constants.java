@@ -9,12 +9,12 @@ public class Constants {
     public static final int TIMEOUT = 10000;
     /** String of delimiters. */
     public static final String DELIMITERS = "\s\n\t\r,.!?;:\"\\[\\]()";
+    /** Port what database is running on. */
+    public static final String PORT = "3306";
     /** Name of the database. */
     public static final String DB_NAME = "parsingDB";
     /** Username that allows to get an access to the database. */
     public static final String USERNAME = "root";
     /** Password that allows to get an access to the database. */
     public static final String PASSWORD = "root";
-    /** Table name which stores list of unique words and their amount. */
-    public static final String TABLE_NAME = "wordscount";
 }

@@ -5,6 +5,7 @@ import java.util.Map;
 import parser.Actions;
 import parser.Delimiters;
 import parser.Page;
+import services.DB;
 import services.Log;
 
 /** Implements callback interface. */
@@ -29,13 +30,8 @@ public class CB implements Callback {
             Map<String, Integer> words = Actions.countWords(delimiters.splitPage(pageContent));
             Actions.display(words);
 
-//            DB db = new DB();
-//            db.writeToDB(words);
-////            db.getFromDB();
-//            db.deleteFromDB();
-//            db.writeToDB(words);
-//            db.getFromDB();
-//            db.close();
+            DB db = new DB();
+            db.writeToDB(words);
         } catch(Exception e) {
             Log.logError(e.toString());
             System.out.println("Проверьте корректность URL.");
