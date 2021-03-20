@@ -1,8 +1,10 @@
 package UI;
 
-import java.util.*;
+import java.util.Map;
 
-import parser.*;
+import parser.Actions;
+import parser.Delimiters;
+import parser.Page;
 import services.Log;
 
 /** Implements callback interface. */

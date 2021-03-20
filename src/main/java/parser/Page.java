@@ -1,9 +1,9 @@
 package parser;
 
-import java.io.*;
-
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.*;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
 
 import services.Log;
 import static env.Constants.*;
