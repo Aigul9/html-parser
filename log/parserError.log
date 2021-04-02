@@ -282,3 +282,10 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2021-03-20_22:47:44.055 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
 2021-03-20_22:48:16.938 [AWT-EventQueue-0] ERROR parser - writeToDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
 2021-03-20_22:48:16.942 [AWT-EventQueue-0] ERROR parser - getFromDB: java.sql.SQLSyntaxErrorException: Unknown database 'parsingdbk'
+2021-04-03_00:38:00.253 [AWT-EventQueue-0] ERROR parser - saveToFile: java.io.FileNotFoundException: <!DOCTYPE html>
+2021-04-03_00:45:45.434 [AWT-EventQueue-0] ERROR parser - saveToFile: 
+2021-04-03_00:46:48.874 [AWT-EventQueue-0] ERROR parser - saveToFile: null
+2021-04-03_00:46:57.306 [AWT-EventQueue-0] ERROR parser - saveToFile: null
+2021-04-03_00:47:33.015 [AWT-EventQueue-0] ERROR parser - saveToFile: null
+2021-04-03_00:48:32.394 [AWT-EventQueue-0] ERROR parser - saveToFile: null
+2021-04-03_00:49:25.561 [AWT-EventQueue-0] ERROR parser - saveToFile: null

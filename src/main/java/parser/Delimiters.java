@@ -2,7 +2,8 @@ package parser;
 
 import static env.Constants.*;
 
-/** Represents delimiters and allows to split content based on
+/**
+ * Represents delimiters and allows to split content based on
  * default or given string of delimiters.
  */
 public class Delimiters {
@@ -12,28 +13,32 @@ public class Delimiters {
     /** Creates default delimiters. */
     public Delimiters() { }
 
-    /** Creates delimiters with given string.
+    /**
+     * Creates delimiters with given string.
      * @param delimiters String of delimiters.
      */
     public Delimiters(String delimiters) {
         this.delimiters = format(delimiters);
     }
 
-    /** Gets string of delimiters.
+    /**
+     * Gets string of delimiters.
      * @return String of delimiters.
      */
     public String getDelimiters() {
         return delimiters;
     }
 
-    /** Changes delimiters.
+    /**
+     * Changes delimiters.
      * @param delimiters String of delimiters.
      */
     public void setDelimiters(String delimiters) {
         this.delimiters = format(delimiters);
     }
 
-    /** Changes string of delimiters in order to use in regular expression.
+    /**
+     * Changes string of delimiters in order to use in regular expression.
      * @param delimiters String of delimiters.
      * @return String of formatted delimiters, so that any of matching symbols can be found.
      */
@@ -41,7 +46,8 @@ public class Delimiters {
         return String.format("%s%s%s", "[", delimiters, "]+");
     }
 
-    /** Splits given text using defined delimiters.
+    /**
+     * Splits given text using defined delimiters.
      * @param textFromDoc String that needs to be split.
      * @return Split text in array.
      */

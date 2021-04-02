@@ -7,7 +7,8 @@ import java.util.TreeMap;
 import parser.Actions;
 import static env.Constants.*;
 
-/** Allows to perform operations with database that have following properties:
+/**
+ * Allows to perform operations with database that have following properties:
  * db, username, password, conn.
  */
 public class DB implements Actions {
@@ -20,11 +21,13 @@ public class DB implements Actions {
     /** Password that allows to get an access to the database. */
     private String password = PASSWORD;
 
-    /** Creates new object of DB with default database name, port and user credentials.
+    /**
+     * Creates new object of DB with default database name, port and user credentials.
      */
     public DB() { }
 
-    /** Creates new object of DB with given database name and user credentials
+    /**
+     * Creates new object of DB with given database name and user credentials
      * and establish connection.
      * @param port Database port.
      * @param dbName Name of the database.
@@ -38,7 +41,8 @@ public class DB implements Actions {
         this.password = password;
     }
 
-    /** Creates URL-address of the database with UTF-8 encoding
+    /**
+     * Creates URL-address of the database with UTF-8 encoding
      * that supports different languages.
      * @param port Database port.
      * @param dbName Name of the database.
@@ -49,11 +53,13 @@ public class DB implements Actions {
                 "?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf-8");
     }
 
-    /** Creates a table for storing statistics if it does not exist yet.
+    /**
+     * Creates a table for storing statistics if it does not exist yet.
+     * @param tableName Name of the table.
      */
-    public void createNewTable() {
+    public void createNewTable(String tableName) {
         try(Connection conn = DriverManager.getConnection(db, username, password)) {
-            String sql = "create table if not exists wordscount (" +
+            String sql = "create table if not exists " + tableName + " (" +
                     "id integer primary key auto_increment," +
                     "word nvarchar(255)," +
                     "amount integer)";
@@ -64,14 +70,16 @@ public class DB implements Actions {
         }
     }
 
-    /** Creates a query with "insert" statement
+    /**
+     * Creates a query with "insert" statement.
      * and writes every entry of the map into a table.
+     * @param tableName Name of the table.
      * @param words Map with two fields: String key and Integer value.
      */
-    public void writeToDB(Map<String, Integer> words) {
+    public void writeToDB(String tableName, Map<String, Integer> words) {
         try(Connection conn = DriverManager.getConnection(db, username, password)) {
-            String query = "insert into wordscount (word, amount) values(?, ?)";
-            createNewTable();
+            String query = String.format("%s %s %s", "insert into", tableName, "(word, amount) values(?, ?)");
+            createNewTable(tableName);
             PreparedStatement stmt = conn.prepareStatement(query);
             for (Map.Entry<String, Integer> word: words.entrySet()) {
                 stmt.setString(1, word.getKey());
@@ -85,11 +93,14 @@ public class DB implements Actions {
         }
     }
 
-    /** Retrieves data from a specified table.
+    /**
+     * Retrieves data from a specified table.
+     * @param tableName Name of the table.
+     * @return Wordname and number of occurrences for each one.
      */
-    public void getFromDB() {
+    public Map<String, Integer> getFromDB(String tableName) {
         try(Connection conn = DriverManager.getConnection(db, username, password)) {
-            String query = "select * from wordscount";
+            String query = String.format("%s %s", "select * from", tableName);
             Statement stmt = conn.createStatement();
             ResultSet res = stmt.executeQuery(query);
             Map<String, Integer> words = new TreeMap<>();
@@ -97,24 +108,27 @@ public class DB implements Actions {
                 while (res.next()) {
                     words.put(res.getString("word"), res.getInt("amount"));
                 }
-
-                Actions.display(words);
             } else {
                 System.out.println("No results");
             }
 
             stmt.close();
             res.close();
+
+            return words;
         } catch (SQLException e) {
             services.Log.logError(e.toString());
+            return null;
         }
     }
 
-    /** Clears a specified table.
+    /**
+     * Clears a specified table.
+     * @param tableName Name of the table.
      */
-    public void deleteFromDB() {
+    public void deleteFromDB(String tableName) {
         try(Connection conn = DriverManager.getConnection(db, username, password)) {
-            String query = "delete from wordscount";
+            String query = String.format("%s %s", "delete from", tableName);
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(query);
 

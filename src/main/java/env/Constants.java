@@ -1,12 +1,11 @@
 package env;
 
-/** Represents a class of constants.
+/**
+ * Represents a class of constants.
  */
 public class Constants {
     /** Url of the HTML-page. */
-    public static final String PAGE_URL = "https://www.google.com/";
-    /** Idle time. */
-    public static final int TIMEOUT = 10000;
+    public static final String PAGE_URL = "https://www.simbirsoft.com/";
     /** String of delimiters. */
     public static final String DELIMITERS = "\s\n\t\r,.!?;:\"\\[\\]()";
     /** Port what database is running on. */

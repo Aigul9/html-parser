@@ -10,7 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.*;
 
-/** Contains test cases. */
+/** Contains test cases for methods related to processing the data. */
 public class PageTest {
 
     /** Checks correctness of split method. */

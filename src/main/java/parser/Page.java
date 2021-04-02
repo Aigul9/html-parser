@@ -1,74 +1,104 @@
 package parser;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
+import java.io.*;
+import javax.swing.text.html.parser.*;
+import javax.swing.text.html.*;
+import javax.swing.text.*;
 
 import services.Log;
 import static env.Constants.*;
 
-/** Represents a page with properties: pageUrl and timeout -
+/**
+ * Represents a page with properties: pageUrl and timeout -
  * and allows to read its content and count number of words on the page.
  */
-public class Page implements Actions {
+public class Page extends HTMLEditorKit.ParserCallback implements Actions {
     /** Url of the HTML-page. */
     private String pageUrl = PAGE_URL;
-    /** Idle time. */
-    private int timeout = TIMEOUT;
+    /** Indicator of pointer place. */
+    private boolean inBody = false;
+    /** Data from the page in String format. */
+    private StringBuffer collectedData = new StringBuffer();
 
-    /** Creates new page with default url and timeout. */
+    /**
+     * Creates new page with default url and timeout.
+     */
     public Page() { }
 
-    /** Creates new page with given url.
+    /**
+     * Creates new page with given url.
      * @param url Url of the HTML-page.
      */
     public Page(String url) {
         this.pageUrl = url;
     }
 
-    /** Creates new page with given timeout.
-     * @param timeout Idle time.
-     */
-    public Page(int timeout) {
-        this.timeout = timeout;
-    }
-
-    /** Creates new Page with given url and timeout.
-     * @param url Url of the HTML-page.
-     * @param timeout Idle time.
-     */
-    public Page(String url, int timeout) {
-        this.pageUrl = url;
-        this.timeout = timeout;
-    }
-
-    /** Gets url of the page.
+    /**
+     * Gets url of the page.
      * @return Page's url in a string format.
      */
     public String getPageUrl() {
         return pageUrl;
     }
 
-    /** Changes url of the page.
+    /**
+     * Changes url of the page.
      * @param url Url of the HTML-page.
      */
     public void setPageUrl(String url) {
         this.pageUrl = url;
     }
 
-    /** Gets text content of the page.
-     * @return Content of the page in a string format.
-     * @exception IllegalArgumentException If pageUrl is not valid.
+    /**
+     * Callback which handles the start of the required range.
+     * @param t HTML-tag.
+     * @param a Collections of tag attributes.
+     * @param pos Current position.
      */
-    public String getPage() {
-        try {
-            Document pageContent = Jsoup.connect(pageUrl).maxBodySize(0).timeout(timeout).get();
-            Actions.disjoinElems(pageContent.select("*"));
-            return pageContent.body().text();
-        } catch(IllegalArgumentException | IOException e) {
-            Log.logError(e.toString());
-            return null;
+    public void handleStartTag(HTML.Tag t, MutableAttributeSet a, int pos)
+    {
+        if(t.equals(HTML.Tag.BODY)) {
+            inBody = true;
         }
+    }
+
+    /**
+     * Callback which handles the end of the required range.
+     * @param t HTML-tag.
+     * @param pos Current position.
+     */
+    public void handleEndTag(HTML.Tag t, int pos)
+    {
+        if(t.equals(HTML.Tag.BODY)) {
+            inBody = false;
+        }
+    }
+
+    /**
+     * Callback which gets text content from the tag and saves it in StringBuffer.
+     * @param data Text content inside a tag.
+     * @param pos Current position.
+     */
+    public void handleText(char[] data, int pos)
+    {
+        if(inBody) {
+            collectedData.append(data).append("\s");
+        }
+    }
+
+    /**
+     * Parses text from input stream.
+     * @param br Reader that gets text from the input stream.
+     * @return String of parsed text.
+     */
+    public StringBuffer parse(BufferedReader br) {
+        ParserDelegator pd = new ParserDelegator();
+        try {
+            pd.parse(br, this, true);
+        } catch (Exception e) {
+            Log.logError(e.toString());
+        }
+
+        return collectedData;
     }
 }

@@ -24,8 +24,8 @@ HTML-parser представляет собой приложение, котор
 1. Перейти в директорию ```src/main/java```
 2. Запустить файл ```GetStats.java```
 
-## Логгирование
-Для логгирования используется фреймворк [Logback](http://logback.qos.ch/). Конфигурационный файл находится в файле ```src/main/resources/logback.xml```. Все логи сохраняются в ```log/parseError.log```.
+## Логирование
+Для логирования используется фреймворк [Logback](http://logback.qos.ch/). Конфигурационный файл находится в файле ```src/main/resources/logback.xml```. Все логи сохраняются в ```log/parseError.log```.
 
 ## Тесты
 Для тестирования функциональности используются библиотеки [JUnit](https://junit.org/junit5/) и [Hamcrest](http://hamcrest.org/JavaHamcrest/). Файл с тестами расположен в ```src/test/java```. Команда для запуска тестов – ```mvn test```.

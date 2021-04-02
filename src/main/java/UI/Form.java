@@ -16,14 +16,17 @@ public class Form extends JFrame {
     /** Callback. */
     Callback callback;
 
-    /** Registers callback.
+    /**
+     * Registers callback.
      * @param callback Callback.
      */
     public void registerCallBack(Callback callback){
         this.callback = callback;
     }
 
-    /** Creates new form. */
+    /**
+     * Creates new form.
+     */
     public Form() {
         setTitle("HTML Parser");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -35,7 +38,9 @@ public class Form extends JFrame {
         setVisible(true);
     }
 
-    /** Creates UI elements such as: label, input field and button - and adds an action listener. */
+    /**
+     * Creates UI elements such as: label, input field and button - and adds an action listener.
+     */
     private void create() {
         panel = new JPanel();
         panel.setPreferredSize(new Dimension(100, 100));
