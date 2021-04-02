@@ -26,7 +26,7 @@ public class CB implements Callback {
 
         try {
             Page page = new Page(pageUrl);
-            Files.saveToFile("files\\page.html", Files.getFromUrl(pageUrl));
+            Files.saveToFile("files\\page", ".html", Files.getFromUrl(pageUrl));
             StringBuffer data = page.parse(Files.getFromFile("files\\page.html"));
             Map<String, Integer> words = Actions.countWords(delimiters.splitPage(data.toString()));
             Actions.display(words);

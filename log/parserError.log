@@ -289,3 +289,7 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2021-04-03_00:47:33.015 [AWT-EventQueue-0] ERROR parser - saveToFile: null
 2021-04-03_00:48:32.394 [AWT-EventQueue-0] ERROR parser - saveToFile: null
 2021-04-03_00:49:25.561 [AWT-EventQueue-0] ERROR parser - saveToFile: null
+2021-04-03_01:40:51.081 [AWT-EventQueue-0] ERROR parser - saveToFile: Incorrect path.
+2021-04-03_01:42:16.870 [AWT-EventQueue-0] ERROR parser - saveToFile: Incorrect path.
+2021-04-03_01:42:46.210 [AWT-EventQueue-0] ERROR parser - saveToFile: Incorrect path.
+2021-04-03_01:44:11.811 [AWT-EventQueue-0] ERROR parser - saveToFile: Incorrect path.

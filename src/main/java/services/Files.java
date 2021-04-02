@@ -3,6 +3,8 @@ package services;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Allows to work with files.
@@ -11,15 +13,28 @@ public class Files {
     /**
      * Writes text content to the file.
      * @param fileName Path to the file.
+     * @param extension File extension.
      * @param content Data that needs to be saved.
      */
-    public static void saveToFile(String fileName, String content) {
+    public static void saveToFile(String fileName, String extension, String content) {
+        System.out.println(String.format("%s%s%s", fileName, getCurrentDate(), extension));
         try(BufferedWriter bw = new BufferedWriter(
-                new FileWriter(fileName))) {
+                new FileWriter(
+                        String.format("%s%s%s", fileName, getCurrentDate(), extension)))) {
             bw.write(content);
         } catch(IOException e) {
-            Log.logError(null);
+            Log.logError("Incorrect path.");
         }
+    }
+
+    /**
+     * Gets current date in specified format.
+     * @return Date in custom format.
+     */
+    public static String getCurrentDate() {
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("_dd-MM-yyyy_HH-mm-ss");
+        return formatter.format(date);
     }
 
     /**
